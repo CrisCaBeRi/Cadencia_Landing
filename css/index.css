@@ -1,0 +1,388 @@
+/* mobile first
+Realizar en primer medida el codigo para visualizacion en mobile*/
+
+/* usar *{ para modificar el css en general desde su primer aplicacion hacia abajo*/
+
+*{
+    box-sizing: border-box; /*para que los elementos no crezcan mas*/ 
+}
+
+a { text-decoration: none; 
+    color: rgb(5, 5, 5);}  
+ul {list-style: none;} /*para quitar los puntos predeterminasdos de las listas y dejar espacio en blanco*/
+li {font-size: 1em;}   
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ajustar el tamaño de letra para todo el html */
+
+
+
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin: 0;
+}
+
+button {
+    font-size: 1em; /*tamaño de letra*/
+    font-weight: bold; /*tipo de letra o anchor de la linea*/
+    padding: 10px 40px; /*ancho y largo de las margenes-espacio del boton con la fuente*/
+    border-radius: 40px; /*darle borde curvo a la margen del boton*/
+    border: 1px solid rgba(0, 0, 0, .5); /*coplor de la margen*/
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .5); /*sombra del margen del boton*/
+    color: white; /*color de la letra*/ 
+    background-color:rgb(246,145,1)/*color fondo del boton*/   
+}
+
+/*se inica con la seleccion de qué elemento se va a modificar (buton), despues se da paso a la accion :(hover) para modificar el comportamiento y lka interaccion del elemento*/
+button:hover{/*para cambiar el color cuando se pasa el mouse por encima del boton*/
+    background-color: black;
+}
+
+/*se modifican las class=containers del html mara que tenga un crecimiento horizontal maxiumo de 1400 px y conserve una margen automatica cuando se agranda (se centra)*/
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+/*cambiar el color del espacio que alamacena header*/ 
+header {
+    background-color:white;
+}
+
+/*para modificar la parte del logo albergado entre header*/
+header .img {
+    margin:0 ; /*para acomodar hacia arriba que no tenga espacio*/
+    padding: 20 30px; /*cuando se escribe padding el 1er valor es arriba y abajo y el segundo a los costados*/
+    
+}
+/*modificar el .container dentro del header*/
+header .container{
+    
+    display: flex; /*para mantener un orden centrado sin que se pegue a los costados*/ 
+    flex-direction: column; /*en caso tal del que tamaño de la pagina se altere, los itmes que no caben se desplazaran en columna hacia abajo*/
+    align-items: center; /*para centrar todos los elementos dentro del .container*/
+}
+/*modificar el irem nav dentro del header cuando se modica la etiqueta dentro del header, no se utliza el .*/ 
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center; /*para centrar texto*/
+    padding-bottom: 25px;    
+}
+
+header span{
+    font-size: 35px;
+}
+
+/*modificar el texto de la etiqueta a*/
+header a{
+    padding: 5px 12px;
+    text-decoration: none;    
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    
+}
+/*modificar el el texto cuando se desliza el mouse encima de las etiquetas a*/
+header a:hover{
+    color:rgb(246,145,1) ;
+}
+
+/*para realizar modificaciones en la secion de hero */
+#hero {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    font-size:20px;
+    display:flex ; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh; /*para ocupar el 90% de la pantalla */ 
+    background-image: url(/Img/Fondos/Fondo_inicio.png);
+    background-size:cover ; /*dar cover para centrar imagen y no dejar espacios vacios*/
+    background-repeat: no-repeat;
+    background-position:left center;}
+
+/*modificaciones del h1*/
+
+#hero h1{ 
+    font-weight: bold;
+    color:white;
+    text-align: center;}
+
+#hero button {
+    text-align: center;   
+    background-color: rgb(246,145,1);
+}
+
+#hero button:hover{
+    color: black;
+}
+
+
+
+
+/*_________________Cadencia_leyenda______________________*/
+
+/*modificaciones del section */
+#cadencia_leyenda .container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 170px 12px;
+}
+#cadencia_leyenda .img_container img{
+    border-radius: 20px;
+    margin-top: -50px;
+}
+
+/* modificar color al span de leyenda en html*/
+.color_acento {color: rgb(246,145,1);
+    font-size: 50px;}
+
+#cadencia_leyenda  h2{
+    font-size:45px ;}
+
+#cadencia_leyenda .texto p{
+    font-size: 25px;}
+
+
+/*_________________mantenimientos_______________________*/
+
+
+/* seleccion de secion para colocar fondo y color de la letra*/
+#mantenimientos{
+    background-color:rgb(246, 145, 1);
+    color: white;
+    text-align: center;}
+
+/*para ubicar el contenido del container*/
+#mantenimientos .container{
+    padding: 100px 12px;}
+/*para desparecer el texto p en la version mobile el display :none*/
+
+
+/*para que el texto h2 se pegue a la parte de arribe*/
+#mantenimientos h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-top: 0; 
+    font-size:45px;
+    text-align: center;}
+
+#mantenimientos h3{
+    font-size: 40px;}
+
+#mantenimientos li{
+    font-size: 25px;}
+
+
+#mantenimientos .boton{ 
+    text-align: center;}
+
+#mantenimientos .carta1 {    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    background-image: url(/Img/Fondos/carta1.png);
+    background-position:center center; 
+    background-size: cover;   
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+#mantenimientos .carta2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(/Img/Fondos/carta2.png);
+    background-position: center center; 
+    background-size: cover;   
+    padding: 50px;
+    margin: 20px; 
+    border-radius: 15px;
+    text-align: left;
+}
+
+#mantenimientos .carta3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(/Img/Fondos/carta3.png);
+    background-position: center center; 
+    background-size: cover;   
+    padding: 50px;
+    margin: 20px; 
+    border-radius: 15px;
+    text-align: left;}
+
+
+
+/*_________________caracteristicas_______________________*/
+
+
+
+
+#caracteristicas .container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;  
+    padding: 20px 12px;}
+
+#caracteristicas span {
+    font-size: 50px;}
+
+#caracteristicas h3 {
+    font-size: 45px;}
+
+#caracteristicas ul {
+    font-size: 25px;}
+
+#caracteristicas video{
+    border-radius: 25px;
+    opacity: 10px;}   
+
+
+
+
+/*_________________Siguenos en redes_______________________*/
+
+
+
+#siguenos_en_redes {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:flex ; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 50vh;}
+
+#siguenos_en_redes h2{
+    margin-top: 0px;
+    font-size:45px ;}
+
+#siguenos_en_redes button{
+    font-size: 5vh; /*se utiliza para hacer crecer el boton asi no tenga letra adentro*/
+    background-color: chocolate;    
+}
+
+/*_________________footer_______________________*/
+
+footer .container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+}
+
+footer p{ 
+    margin: 0;
+    padding: 12px;
+    color: darkgray;
+}
+
+
+
+/*________________________________________________________________*/
+
+
+/*edicion para media*/
+@media (min-width:720px) {
+    /*cuando la pantalla se agrande el flex direction se modificara de columna a costados*/
+    header {
+        position: fixed; /*para que el header quede en posicion fija asi se haga scroll*/
+        width: 100%; /*hay que ponerle anchura de 100% para que al desplazarse no se modifique*/
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;/*para dejar espacio entre los objetos que esten dentro del contenedor*/
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;  
+        padding-right: 20px;/*agregar espacio hacia la derecha*/   
+    }
+
+    #cadencia_leyenda .container{
+        display: flex;
+    }
+
+    #hero h1 {
+        font-size:2em ;
+        
+    }
+    #hero button {
+        text-align: right;
+        font-size: 20px;
+        background-color: rgb(246,145,1);}
+
+
+    /*_________________cdencia_leyenda_______________________*/
+
+
+    #cadencia_leyenda .container {
+        display: flex;  
+        justify-content: space-evenly; /*sperar elementos dentro del container de manera equitativa dependiendo el tamaño de visualizacion web o desk*/
+    }
+
+    #cadencia_leyenda .texto {
+        width: 50%;
+        text-align: initial;
+        padding:0px 30px;
+        max-width: 600px;
+        display: flex;        
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    #cadencia_leyenda .img_container {
+        background-image:url(/Img/Fondos/fondo_carta2.PNG) ;
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+        border-radius: 10px;}
+
+    #cadencia_leyenda h2 {margin-top: 0px;}
+
+
+    /*_________________mantenimientos_______________________*/
+
+    #mantenimientos .tipos_de_mantenimiento {
+        display: flex; /*para poner las cartas al lado cada una*/
+        justify-content:center ;}
+
+
+    #mantenimientos h3 {
+        margin-top:0px ;}
+
+    #mantenimientos ul {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    margin-bottom: 30px;}
+
+    
+    #mantenimientos .carta1{
+        padding: 85px;
+        box-shadow: 2px 2px 10px rgb(30, 30, 30);
+        font-size: 20px;}
+
+    #mantenimientos .carta2{
+        padding: 85px;
+        box-shadow: 2px 2px 10px rgb(30, 30, 30);
+        font-size: 20px;}
+           
+    #mantenimientos .carta3{
+        padding: 85px;
+        box-shadow: 2px 2px 10px rgb(30, 30, 30);
+        font-size: 20px;}  
+
+    #caractertisticas .container{
+        text-align: initial;}      
+
+} 
+
